@@ -6,13 +6,15 @@ Time spent: **7** hours spent in total
 
 ## Pentesting Report
 
-### 1. Reveal Private/Draft/Password Protected Posts
+### 1. Viewing Unauthenticated Posts (CVE-2019-17671)
   - [ ] Summary: 
-    - Vulnerability types:
+    - Vulnerability types: URL Manipulation
     - Tested in version: 4.2
-    - Fixed in version: 
+    - Fixed in version: 5.2.4
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
+   1) Go to homepage of WordPress site, in this case 'http://wpdistillery.vm/'
+   2) Add the following to the end of the URL of the homepage: '?static=1&order=asc' (Note that sometimes "asc" does not work, so you might want to try '?static=1&order=asc'
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 ### 2. (Required) Vulnerability Name or ID
