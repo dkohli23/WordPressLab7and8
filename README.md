@@ -67,10 +67,17 @@ Time spent: **7** hours spent in total
     - Vulnerability types: XSS (Cross-Site Scripting)
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough:
+  ![Alt Text](Untitled.gif) 
   - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  1. As an anonymous user, post a comment in the following format: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAAAAA..AAA'></a>`. But you have to write 640k A's to make the message long enough.
+  2. If the admin requires comment approval, then the admin might approve the comment
+  3. Then, when the admin goes to the page on which the comment is posted, the Javascript will run and create a "hello word" alert.
+  - [ ] Affected source code: Unsure
+  - [ ] Sources/Citations
+    - **Source 1:** https://www.exploit-db.com/exploits/36844
+    - **Source 2:** https://klikki.fi/adv/wordpress2.html
+    - **Source 3:** https://www.youtube.com/watch?v=OCqQZJZ1Ie4
 ### 3. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
