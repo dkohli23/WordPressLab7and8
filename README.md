@@ -8,7 +8,7 @@ Time spent: **7** hours spent in total
 
 ### 1. Viewing Unauthenticated Posts (CVE-2019-17671)
   - [ ] Summary: 
-    - Vulnerability types: URL Manipulation
+    - Vulnerability types: Privilege Escalation (maybe). This allows hidden content to be revealed to any hacker. 
     - Tested in version: 4.2
     - Fixed in version: 5.2.4
   - [ ] GIF Walkthrough: This shows that the admin has created the pages and they are unable to be accessed by an anonymous user, until they do the URL manipulation.
@@ -62,9 +62,9 @@ Time spent: **7** hours spent in total
   ```
   - [ ] Sources/Citations: 
 - **Source 1**: https://0day.work/proof-of-concept-for-wordpress-5-2-3-viewing-unauthenticated-posts/
-### 2. Stored XSS in Comment (CVE: 2015-3440)
+### 2. Stored XSS in Comment (CVE-2015-3440)
   - [ ] Summary: 
-    - Vulnerability types: XSS (Cross-Site Scripting)
+    - Vulnerability types: XSS (Cross-Site Scripting). This can cause anyone who visits the page to run a malicious Javascript upon visitng the website. 
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: **Please ignore the homepage title, I forgot to change it for the current exploit, but it does not affect anything**
@@ -78,33 +78,25 @@ Time spent: **7** hours spent in total
     - **Source 1:** https://www.exploit-db.com/exploits/36844
     - **Source 2:** https://klikki.fi/adv/wordpress2.html
     - **Source 3:** https://www.youtube.com/watch?v=OCqQZJZ1Ie4
-### 3. (Required) Vulnerability Name or ID
+### 3. Explore and Access the Full Directory of a WordPress site (CVE-2019-8943)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types: URL manipulation. This allows a user to access all of the site's CSS and Javascript files, possibly revealing sensitive information. 
+    - Tested in version: 4.2
+    - Fixed in version: 4.3 (I think; admins have an option to disable directory browsing in Security settings)
   - [ ] GIF Walkthrough: 
+  ![Alt Text](Exploit3.gif)
   - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-### 4. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-### 5. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
+  1. The admin should not have added any additional security measures
+  2. Any user should go to the homepage of the WordPress site, in this case it is `http://wpdistillery.vm/`
+  3. Then, add the following to the end of the homepage link: `wp-admin/js/` or `wp-admin/css/`. For example, I used: `http://wpdistillery.vm/wp-admin/js/`
+  4. Now, the user can browse all of the CSS and Javascript files and see their content. Now, they can access potentially sensitive content. 
+  - [ ] Affected source code: \wp-content
+  - [ ] Sources/Citations:
+    - **Link 1:** https://security.stackexchange.com/questions/160651/what-are-sensitive-wordpress-site-directories
+    - **Link 2:** https://www.wpbeginner.com/wp-tutorials/disable-directory-browsing-wordpress/
+    - **Link 3:** https://www.acunetix.com/vulnerabilities/web/wordpress-directory-traversal-3-7-5-0-3/
+    - **Link 4:"** https://cwe.mitre.org/data/definitions/548.html
+
 
 ## Assets
 
