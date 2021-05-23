@@ -90,7 +90,7 @@ Time spent: **7** hours spent in total
   2. Any user should go to the homepage of the WordPress site, in this case it is `http://wpdistillery.vm/`
   3. Then, add the following to the end of the homepage link: `wp-admin/js/` or `wp-admin/css/`. For example, I used: `http://wpdistillery.vm/wp-admin/js/`
   4. Now, the user can browse all of the CSS and Javascript files and see their content. Now, they can access potentially sensitive content. 
-  - [ ] Affected source code: \wp-content
+  - [ ] Affected source code: **\wp-content** and **\wp-admin** in WordPress sites.
   - [ ] Sources/Citations:
     - **Link 1:** https://security.stackexchange.com/questions/160651/what-are-sensitive-wordpress-site-directories
     - **Link 2:** https://www.wpbeginner.com/wp-tutorials/disable-directory-browsing-wordpress/
