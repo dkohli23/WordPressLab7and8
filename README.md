@@ -84,7 +84,7 @@ Time spent: **7** hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.3 (I think; admins have an option to disable directory browsing in Security settings)
   - [ ] GIF Walkthrough: 
-  ![Alt Text](Exploit3.gif)
+  ![Alt Text](Exploit-3.gif)
   - [ ] Steps to recreate: 
   1. The admin should not have added any additional security measures
   2. Any user should go to the homepage of the WordPress site, in this case it is `http://wpdistillery.vm/`
