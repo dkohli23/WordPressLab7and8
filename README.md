@@ -8,7 +8,7 @@ Time spent: **7** hours spent in total
 
 ### 1. Viewing Unauthenticated Posts (CVE-2019-17671)
   - [ ] Summary: 
-    - Vulnerability types: Privilege Escalation (maybe). This allows hidden content to be revealed to any hacker. 
+    - Vulnerability types: Privilege Escalation. This allows hidden content to be revealed to any hacker. 
     - Tested in version: 4.2
     - Fixed in version: 5.2.4
   - [ ] GIF Walkthrough: This shows that the admin has created the pages and they are unable to be accessed by an anonymous user, until they do the URL manipulation.
