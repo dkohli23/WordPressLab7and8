@@ -12,6 +12,8 @@ Time spent: **7** hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 5.2.4
   - [ ] GIF Walkthrough: 
+![Alt Text](Explot2.gif)
+
   - [ ] Steps to recreate: 
    1) Go to homepage of WordPress site, in this case it is `http://wpdistillery.vm/`
    2) Add the following to the end of the URL of the homepage: `?static=1&order=asc` (Note that sometimes "asc" does not work, so you might want to try `?static=1&order=asc`). For example, I had `http://wpdistillery.vm/?static=1&order=asc`
