@@ -83,7 +83,7 @@ Time spent: **7** hours spent in total
     - Vulnerability types: URL manipulation. This allows a user to access all of the site's CSS and Javascript files, possibly revealing sensitive information. 
     - Tested in version: 4.2
     - Fixed in version: 4.3 (I think; admins have an option to disable directory browsing in Security settings)
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: **This starts off by showing that I am not logged in as admin. Yet, I can still browse the directory of Javascript and CSS information.**
   ![Alt Text](Exploit-3.gif)
   - [ ] Steps to recreate: 
   1. The admin should not have added any additional security measures
