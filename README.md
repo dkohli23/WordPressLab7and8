@@ -11,7 +11,7 @@ Time spent: **7** hours spent in total
     - Vulnerability types: URL Manipulation
     - Tested in version: 4.2
     - Fixed in version: 5.2.4
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: This shows that the admin has created the pages and they are unable to be accessed by an anonymous user, until they do the URL manipulation.
 ![Alt Text](Explot2.gif)
 
   - [ ] Steps to recreate: 
@@ -61,12 +61,12 @@ Time spent: **7** hours spent in total
 			}
   ```
   - [ ] Sources/Citations: 
-- **Source 1: **https://0day.work/proof-of-concept-for-wordpress-5-2-3-viewing-unauthenticated-posts/
-### 2. (Required) Vulnerability Name or ID
+- **Source 1**: https://0day.work/proof-of-concept-for-wordpress-5-2-3-viewing-unauthenticated-posts/
+### 2. Stored XSS in Comment (CVE: 2015-3440)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types: XSS (Cross-Site Scripting)
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
