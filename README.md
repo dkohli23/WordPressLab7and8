@@ -58,7 +58,9 @@ Time spent: **7** hours spent in total
 				}
 			}
   ```
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+-[ ] Sources/Citation
+- [Link 1] https://0day.work/proof-of-concept-for-wordpress-5-2-3-viewing-unauthenticated-posts/
+- [Link 2]
 ### 2. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
