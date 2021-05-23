@@ -13,9 +13,51 @@ Time spent: **7** hours spent in total
     - Fixed in version: 5.2.4
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
-   1) Go to homepage of WordPress site, in this case `http://wpdistillery.vm/`
-   2) Add the following to the end of the URL of the homepage: `?static=1&order=asc` (Note that sometimes "asc" does not work, so you might want to try `?static=1&order=asc`
-  - [ ] Affected source code:
+   1) Go to homepage of WordPress site, in this case it is `http://wpdistillery.vm/`
+   2) Add the following to the end of the URL of the homepage: `?static=1&order=asc` (Note that sometimes "asc" does not work, so you might want to try `?static=1&order=asc`). For example, I had `http://wpdistillery.vm/?static=1&order=asc`
+  - [ ] Affected source code: `var_dump()`
+  ```
+  		// Check post status to determine if post should be displayed.
+		if ( ! empty( $this->posts ) && ( $this->is_single || $this->is_page ) ) {
+			$status = get_post_status( $this->posts[0] );
+			if ( 'attachment' === $this->posts[0]->post_type && 0 === (int) $this->posts[0]->post_parent ) {
+				$this->is_page       = false;
+				$this->is_single     = true;
+				$this->is_attachment = true;
+			}
+			$post_status_obj = get_post_status_object( $status );
+
+            //PoC: Let's see what we have
+			//var_dump($q_status);
+			//var_dump($post_status_obj);
+			// If the post_status was specifically requested, let it pass through.
+			if ( ! $post_status_obj->public && ! in_array( $status, $q_status ) ) {
+				//var_dump("PoC: Incorrect status! :-/");
+				if ( ! is_user_logged_in() ) {
+					// User must be logged in to view unpublished posts.
+					$this->posts = array();
+					//var_dump("PoC: No posts :-(");
+				} else {
+					if ( $post_status_obj->protected ) {
+						// User must have edit permissions on the draft to preview.
+						if ( ! current_user_can( $edit_cap, $this->posts[0]->ID ) ) {
+							$this->posts = array();
+						} else {
+							$this->is_preview = true;
+							if ( 'future' != $status ) {
+								$this->posts[0]->post_date = current_time( 'mysql' );
+							}
+						}
+					} elseif ( $post_status_obj->private ) {
+						if ( ! current_user_can( $read_cap, $this->posts[0]->ID ) ) {
+							$this->posts = array();
+						}
+					} else {
+						$this->posts = array();
+					}
+				}
+			}
+  ```
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 ### 2. (Required) Vulnerability Name or ID
   - [ ] Summary: 
