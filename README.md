@@ -67,7 +67,7 @@ Time spent: **7** hours spent in total
     - Vulnerability types: XSS (Cross-Site Scripting)
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough:
+  - [ ] GIF Walkthrough: **Please ignore the homepage title, I forgot to change it for the current exploit, but it does not affect anything**
   ![Alt Text](Untitled.gif) 
   - [ ] Steps to recreate: 
   1. As an anonymous user, post a comment in the following format: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAAAAA..AAA'></a>`. But you have to write 640k A's to make the message long enough.
