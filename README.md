@@ -70,7 +70,7 @@ Time spent: **7** hours spent in total
   - [ ] GIF Walkthrough: **Please ignore the homepage title, I forgot to change it for the current exploit, but it does not affect anything**
   ![Alt Text](Untitled.gif) 
   - [ ] Steps to recreate: 
-  1. As an anonymous user, post a comment in the following format: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAAAAA..AAA'></a>`. But you have to write 640k A's to make the message long enough.
+  1. As an anonymous user, post a comment in the following format: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAAAAA..AAA'></a>`. But you have to write 640k A's to make the message long enough. Refer to the file **StoredXSSComment** in repository to get the full comment to copy-and-paste
   2. If the admin requires comment approval, then the admin might approve the comment
   3. Then, when the admin goes to the page on which the comment is posted, the Javascript will run and create a "hello word" alert.
   - [ ] Affected source code: Unsure
@@ -100,8 +100,7 @@ Time spent: **7** hours spent in total
 
 ## Assets
 
-List any additional assets, such as scripts or files
-
+![Alt Text](StoredXSSCode)
 ## Resources
 
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
