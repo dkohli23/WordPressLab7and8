@@ -100,7 +100,8 @@ Time spent: **7** hours spent in total
 
 ## Assets
 
-![Alt Text](StoredXSSCode)
+Full Stored XSS Comment to post: https://github.com/dkohli23/WordPressLab7and8/blob/57e7b30018b064c915960a4dde2e9f37770d7146/StoredXSSComment
+
 ## Resources
 
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
